@@ -1,0 +1,12 @@
+# Construye mi aplicación usando el Dockerfile, ejecuta un contenedor llamado s3-fastapi-api, 
+# expón el puerto 8000 y utiliza las variables de .env
+
+services:
+  api:
+    build: .
+    container_name: s3-fastapi-api
+    ports:
+      - "8000:8000"
+    # El .env no se copia a la imagen. Docker simplemente lo utiliza para proporcionarle las variables al contenedor cuando se ejecuta.
+    env_file:
+      - .env

@@ -1,0 +1,7 @@
+# Archivos que no queremos que se suban al contenedor de Docker
+.venv
+__pycache__
+*.pyc
+.env
+.git
+.gitignore
